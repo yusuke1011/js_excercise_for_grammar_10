@@ -1,6 +1,6 @@
 # レポジトリ内容
 
-このレポジトリは[Web白熱教室](https://tsuyopon.xyz/)の[JavaScriptの学習コンテンツ > JavaScript基礎文法編](https://tsuyopon.xyz/learning-contents/web-dev/javascript/javascript-grammar/)にある「[【エクササイズ】配列を引数にした関数を作る【参照・イテレーションの理解度チェック】](https://tsuyopon.xyz/learning-contents/web-dev/javascript/javascript-grammar/js_excercise_for_grammar_part_10/)」で利用するものです。
+このレポジトリは[Web白熱教室](https://tsuyopon.xyz/)の[JavaScriptの学習コンテンツ > JavaScript基礎文法編](https://tsuyopon.xyz/learning-contents/web-dev/javascript/javascript-grammar/)にある「[【エクササイズ】JavaScriptの配列を引数にした関数を作る【参照の理解度チェック】](https://tsuyopon.xyz/learning-contents/web-dev/javascript/javascript-grammar/js_excercise_for_grammar_part_10/)」で利用するものです。
 
 
 ### 完成形
