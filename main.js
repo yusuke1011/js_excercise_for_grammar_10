@@ -14,6 +14,31 @@
  *     - removeMaxNumberFromArray関数を実行した後の配列numbersの内容は [10, 500, 234, 965, 221] のままである
  */
 
+const removeMaxNumberFromArray = (_numbers) => {
+    //ひとまず配列の先頭の値を最大値とする
+    let maxNumber = _numbers[0];
+    //配列の最大値を算出
+    _numbers.forEach((element) => {
+        maxNumber = Math.max(maxNumber,element)
+    });
+    //最大値を削除した配列を返す
+    return _numbers.filter((element) => {
+        return maxNumber != element;
+    });
+}
+
+//実行結果の確認
+const numbers = [10, 500, 234, 965, 221];
+console.log('入力：',numbers);
+console.log('出力：',removeMaxNumberFromArray(numbers));
+console.log('実行後の入力：',numbers);
+
+/**
+ * 上記の実装方法だと、今回の課題の意図と異なる気がするので
+ * 違う方法でも実装してみました。
+ */
+
+
 
 
 /**
@@ -33,4 +58,38 @@
  *   - その他
  *     - 「Array.prototype.sort()」を使う
  *       - https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+ */
+
+const sortNumbers = (_numbers) => {
+    //戻り値用の配列
+    let outputArray = [];
+    //引数の配列の要素数（for文の条件文で使用する）
+    const numbersLength = _numbers.length;
+
+    for(let i = 0; i < numbersLength; i++){
+        //ひとまず配列の先頭の値を最小値とする
+        let minNumber = _numbers[0];
+        //配列の最小値を算出
+        _numbers.forEach((element) => {
+            minNumber = Math.min(minNumber,element)
+        });
+        //_numbersの最小値を削除した配列を_numbersに再代入
+        _numbers = _numbers.filter((element) => {
+            return minNumber != element;
+        });
+        //戻り値用の配列の最後尾に最小値を代入
+        outputArray.push(minNumber);
+    }
+    return outputArray;
+}
+
+//実行結果の確認
+const beforeSortNumbers = [1000, 10, 500, 234, 965, 221, 102];
+console.log('入力：',beforeSortNumbers);
+console.log('出力：',sortNumbers(beforeSortNumbers));
+console.log('実行後の入力：',beforeSortNumbers);
+
+/**
+ * 上記はsort()を使用するヒントを見ずに実装してしまったので、
+ * 以下ではsort()を使用して実装してみました。
  */
