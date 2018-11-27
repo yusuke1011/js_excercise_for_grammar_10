@@ -19,19 +19,19 @@ const removeMaxNumberFromArray = (_numbers) => {
     let maxNumber = _numbers[0];
     //配列の最大値を算出
     _numbers.forEach((element) => {
-        maxNumber = Math.max(maxNumber,element)
+        maxNumber = Math.max(maxNumber, element)
     });
     //最大値を削除した配列を返す
     return _numbers.filter((element) => {
         return maxNumber != element;
     });
-}
+};
 
 //実行結果の確認
 const numbers = [10, 500, 234, 965, 221];
-console.log('入力：',numbers);
-console.log('出力：',removeMaxNumberFromArray(numbers));
-console.log('実行後の入力：',numbers);
+console.log('入力：', numbers);
+console.log('出力：', removeMaxNumberFromArray(numbers));
+console.log('実行後の入力：', numbers);
 
 /**
  * 課題2: 数値が格納されている配列を引数で受け取り、小さい順に並べ替える
@@ -63,7 +63,7 @@ const sortNumbers = (_numbers) => {
         let minNumber = _numbers[0];
         //配列の最小値を算出
         _numbers.forEach((element) => {
-            minNumber = Math.min(minNumber,element)
+            minNumber = Math.min(minNumber, element)
         });
         //_numbersの最小値を削除した配列を_numbersに再代入
         _numbers = _numbers.filter((element) => {
@@ -73,7 +73,7 @@ const sortNumbers = (_numbers) => {
         outputArray.push(minNumber);
     }
     return outputArray;
-}
+};
 
 /**
  * 上記はsort()を使用するヒントを見ずに実装してしまったので、
@@ -85,21 +85,21 @@ const sortNumbers2 = (_numbers) =>{
 
     returnNumbers.sort((a, b) => {
         return a - b;
-    })
+    });
 
     return returnNumbers;
-}
+};
 
 //実行結果の確認
 const beforeSortNumbers = [1000, 10, 500, 234, 965, 221, 102];
 
-console.log('入力：',beforeSortNumbers);
-console.log('出力：',sortNumbers(beforeSortNumbers));
-console.log('実行後の入力：',beforeSortNumbers); 
+console.log('入力：', beforeSortNumbers);
+console.log('出力：', sortNumbers(beforeSortNumbers));
+console.log('実行後の入力：', beforeSortNumbers); 
 
-console.log('入力：',beforeSortNumbers);
-console.log('出力：',sortNumbers2(beforeSortNumbers));
-console.log('実行後の入力：',beforeSortNumbers);
+console.log('入力：', beforeSortNumbers);
+console.log('出力：', sortNumbers2(beforeSortNumbers));
+console.log('実行後の入力：', beforeSortNumbers);
 
 
 /**
@@ -108,19 +108,19 @@ console.log('実行後の入力：',beforeSortNumbers);
 
 const test1 = (_numbers) =>{
     _numbers.push(1); 
-}
+};
 
 const test2 = (_numbers) =>{
     _numbers.push(1); 
     return _numbers;
-}
+};
 
 const testNumbers = [];
 
-console.log('入力：',testNumbers);
+console.log('入力：', testNumbers);
 test1(testNumbers);
-console.log('実行後の入力：',testNumbers); //1が追加される
+console.log('実行後の入力：', testNumbers); //1が追加される
 
-console.log('入力：',testNumbers);
-console.log('出力：',test2(testNumbers));
-console.log('実行後の入力：',testNumbers); //1が追加される
+console.log('入力：', testNumbers);
+console.log('出力：', test2(testNumbers));
+console.log('実行後の入力：', testNumbers); //1が追加される
