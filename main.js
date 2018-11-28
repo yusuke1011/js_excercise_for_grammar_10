@@ -54,7 +54,7 @@ console.log('実行後の入力：', numbers);
 
 const sortNumbers = (_numbers) => {
     //戻り値用の配列
-    let outputArray = [];
+    const outputArray = [];
     //引数の配列をコピー
     let copiedNumbers = _numbers.slice();
     //引数の配列の要素数
@@ -83,7 +83,7 @@ const sortNumbers = (_numbers) => {
  */
 
 const sortNumbers2 = (_numbers) =>{
-    let returnNumbers = _numbers.slice();
+    const returnNumbers = _numbers.slice();
 
     returnNumbers.sort((a, b) => {
         return a - b;
