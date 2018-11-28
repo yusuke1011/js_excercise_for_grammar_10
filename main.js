@@ -62,9 +62,9 @@ const sortNumbers = (_numbers) => {
 
     for(let i = 0; i < numbersLength; i++){
         //ひとまず配列の先頭の値を最小値とする
-        let minNumber = _numbers[0];
+        let minNumber = copiedNumbers[0];
         //配列の最小値を算出
-        _numbers.forEach((element) => {
+        copiedNumbers.forEach((element) => {
             minNumber = Math.min(minNumber, element)
         });
         //_numbersの最小値を削除した配列を_numbersに再代入
