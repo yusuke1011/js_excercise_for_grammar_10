@@ -55,6 +55,8 @@ console.log('実行後の入力：', numbers);
 const sortNumbers = (_numbers) => {
     //戻り値用の配列
     let outputArray = [];
+    //引数の配列をコピー
+    let copiedNumbers = _numbers.slice();
     //引数の配列の要素数
     const numbersLength = _numbers.length;
 
@@ -66,7 +68,7 @@ const sortNumbers = (_numbers) => {
             minNumber = Math.min(minNumber, element)
         });
         //_numbersの最小値を削除した配列を_numbersに再代入
-        _numbers = _numbers.filter((element) => {
+        copiedNumbers = copiedNumbers.filter((element) => {
             return minNumber != element;
         });
         //戻り値用の配列の最後尾に最小値を代入
