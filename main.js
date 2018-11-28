@@ -23,7 +23,7 @@ const removeMaxNumberFromArray = (_numbers) => {
     });
     //最大値を削除した配列を返す
     return _numbers.filter((element) => {
-        return maxNumber != element;
+        return maxNumber !== element;
     });
 };
 
@@ -69,7 +69,7 @@ const sortNumbers = (_numbers) => {
         });
         //_numbersの最小値を削除した配列を_numbersに再代入
         copiedNumbers = copiedNumbers.filter((element) => {
-            return minNumber != element;
+            return minNumber !== element;
         });
         //戻り値用の配列の最後尾に最小値を代入
         outputArray.push(minNumber);
